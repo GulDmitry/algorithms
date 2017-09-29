@@ -3,8 +3,8 @@
 /nbproject/
 
 # PHP
+/vendor/
 composer.phar
-vendor/bin
 
 # Go
 # Binaries for programs and plugins

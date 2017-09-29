@@ -1,0 +1,11 @@
+version: '3'
+services:
+  php:
+    build: ./docker/php
+    container_name: algs-php
+    user: ${UID}:${UID}
+    volumes:
+      - .:/var/www
+      # Composer cache.
+#      - ~/.cache/composer:/.composer/cache
+    working_dir: /var/www
