@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$DIR/../../" # Force phpstorm to sit in project's root dir.
+docker run -i --rm --net=host --sig-proxy=true --pid=host \
+-v ${PWD}/src:/go/src/github.com/guldmitry/algorithms \
+-v ${PWD}/tests:/go/src/tests \
+-v /tmp/:/tmp/ \
+-v $HOME:$HOME \
+-w /go/src/github.com/guldmitry/algorithms \
+--user ${UID}:${UID} \
+golang:1.9 go "$@"

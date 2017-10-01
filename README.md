@@ -12,3 +12,7 @@ Some algorithms in PHP and Golang.
 `docker-compose -f docker-compose.php.yml run php vendor/bin/phpunit src/Test/ExampleTest.php`
 
 #### Go
+
+`./docker/go/go test tests/Sorting`
+
+`docker-compose -f docker-compose.go.yml run go go test ../../../tests/Sorting/buttle_sort_test.go`

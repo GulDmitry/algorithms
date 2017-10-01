@@ -1,0 +1,9 @@
+version: '3'
+services:
+  go:
+    image: golang:1.9
+    container_name: algs-go
+    volumes:
+      - ./src:/go/src/github.com/guldmitry/algorithms
+      - ./tests:/go/src/tests
+    working_dir: /go/src/github.com/guldmitry/algorithms
