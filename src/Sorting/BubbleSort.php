@@ -5,7 +5,7 @@ namespace GulDmitry\Algorithms\Sorting;
 /**
  * O(n^2)
  */
-class BubbleSort implements SortingInterface
+class BubbleSort
 {
     public function sort(array $raw, bool $ascDirection = true): array
     {
