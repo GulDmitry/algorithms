@@ -16,7 +16,7 @@ func makeRange(min, max int) []int {
 }
 
 func TestSum(t *testing.T) {
-	shuffled := makeRange(-101, 101);
+	shuffled := makeRange(-101, 101)
 	expectedAsc := append([]int(nil), shuffled...)
 	sort.Ints(expectedAsc)
 
