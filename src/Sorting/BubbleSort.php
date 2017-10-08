@@ -4,6 +4,7 @@ namespace GulDmitry\Algorithms\Sorting;
 
 /**
  * O(n^2)
+ * Worst case - (N-1)*(N/2)
  */
 class BubbleSort
 {
