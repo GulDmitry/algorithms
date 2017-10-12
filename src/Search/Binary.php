@@ -3,7 +3,7 @@
 namespace GulDmitry\Algorithms\Search;
 
 /**
- * log(N)
+ * O(log n)
  */
 class Binary
 {
@@ -25,7 +25,7 @@ class Binary
             if ($midElm === $num) {
                 return $midInd;
             } elseif ($midElm < $num) {
-                $lowInd = $midInd +1;
+                $lowInd = $midInd + 1;
             } elseif ($midElm > $num) {
                 $highInd = $midInd - 1;
             }
