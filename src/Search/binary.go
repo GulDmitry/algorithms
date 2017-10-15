@@ -4,7 +4,7 @@ import "sort"
 
 // log(N)
 // -1 if element is not found.
-func Search(input []int, num int) (position int) {
+func Binary(input []int, num int) (position int) {
 	position = -1
 	sort.Ints(input)
 	lowInd := 0

@@ -3,8 +3,9 @@ package Sorting
 import "testing"
 import (
 	sorting "github.com/guldmitry/algorithms/Sorting"
-	"sort"
 	"reflect"
+	"sort"
+	"math/rand"
 )
 
 func makeRange(min, max int) []int {
@@ -15,16 +16,27 @@ func makeRange(min, max int) []int {
 	return a
 }
 
-func TestSum(t *testing.T) {
+func Shuffle(slice interface{}) {
+	rv := reflect.ValueOf(slice)
+	swap := reflect.Swapper(slice)
+	length := rv.Len()
+	for i := length - 1; i > 0; i-- {
+		j := rand.Intn(i + 1)
+		swap(i, j)
+	}
+}
+
+func TestBubbleSort(t *testing.T) {
 	shuffled := makeRange(-101, 101)
+	Shuffle(shuffled)
 	expectedAsc := append([]int(nil), shuffled...)
 	sort.Ints(expectedAsc)
 
 	expectedDesc := append([]int(nil), expectedAsc...)
 	sort.Sort(sort.Reverse(sort.IntSlice(expectedDesc)))
 
-	actualAsc := sorting.Sort(shuffled, true)
-	actualDesc := sorting.Sort(shuffled, false)
+	actualAsc := sorting.Bubble(shuffled, true)
+	actualDesc := sorting.Bubble(shuffled, false)
 
 	errorMessageTpl := "Arrays are not equal, want: %v, got: %v."
 	if !reflect.DeepEqual(expectedAsc, actualAsc) {

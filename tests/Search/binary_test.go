@@ -28,7 +28,7 @@ var dataProvider = []struct {
 
 func TestSearch(t *testing.T) {
 	for _, v := range dataProvider {
-		actualPosition := search.Search(v.input, v.num)
+		actualPosition := search.Binary(v.input, v.num)
 		if v.expectedPosition != actualPosition {
 			t.Errorf("Want `%d`, got `%d`", v.expectedPosition, actualPosition)
 		}

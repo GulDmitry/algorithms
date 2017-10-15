@@ -1,7 +1,7 @@
 package Sorting
 
 // O(n^2)
-func Sort(raw []int, ascDirection bool) []int {
+func Bubble(raw []int, ascDirection bool) []int {
 	length := len(raw)
 
 	rawCopy := make([]int, length)
