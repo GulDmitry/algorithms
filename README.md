@@ -26,3 +26,6 @@ Run all tests:
 
 Or One:
 `./docker/bin/go test tests/Sorting`
+
+## TODO
+* Ford & Bellman algorithm (for negative weight)
