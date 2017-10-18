@@ -2,8 +2,6 @@
 
 namespace GulDmitry\Algorithms\Search;
 
-use PHPUnit\Framework\TestCase;
-
 /**
  * O(V + E) - people + edges.
  * Node: a block of information in the network.
@@ -11,7 +9,7 @@ use PHPUnit\Framework\TestCase;
  * Centrality: determining the relative importance of a node.
  * Clustering: partitioning nodes into groups.
  */
-class BreadthFirstSearch extends TestCase
+class BreadthFirstSearch
 {
     public function search(array $graph, string $start, callable $condition): ?string
     {

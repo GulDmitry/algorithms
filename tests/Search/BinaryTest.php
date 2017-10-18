@@ -13,7 +13,7 @@ class BinaryTest extends TestCase
      * @param int $num
      * @param int|null $expectedPosition
      */
-    public function testSearching(array $searchIn, int $num, ?int $expectedPosition)
+    public function testSearch(array $searchIn, int $num, ?int $expectedPosition)
     {
         $alg = new Binary();
 
