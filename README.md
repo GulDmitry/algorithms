@@ -24,8 +24,11 @@ Get env:
 Run all tests:
 `./docker/bin/go test tests/... -v`
 
-Or One:
+In package:
 `./docker/bin/go test tests/Sorting`
+
+One test:
+`./docker/bin/go test ../../../tests/Search/dijkstras_test.go`
 
 ## TODO
 * Ford & Bellman algorithm (for negative weight)
