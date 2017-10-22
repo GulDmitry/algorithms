@@ -5,7 +5,7 @@ namespace GulDmitry\Algorithms\Tests;
 use GulDmitry\Algorithms\SetCover;
 use PHPUnit\Framework\TestCase;
 
-class SeCoverTest extends TestCase
+class SetCoverTest extends TestCase
 {
     public function testCoverage()
     {
@@ -29,5 +29,4 @@ class SeCoverTest extends TestCase
 
         $this->assertEquals($expected, $actual, '', 0.0, 10, true);
     }
-
 }
