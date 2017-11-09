@@ -12,11 +12,11 @@ func TestSetCover(t *testing.T) {
 		"mt", "wa", "or", "id", "nv", "ut", "ca", "az",
 	}
 	stations := map[string][]string{
-		"kone":   {"id", "nv", "ut"},
+		"kone":   {"id", "nv", "ut", "ca"},
 		"ktwo":   {"wa", "id", "mt"},
 		"kthree": {"or", "nv", "ca"},
 		"kfour":  {"nv", "ut"},
-		"kfive":  {"ca", "az"},
+		"kfive":  {"az"},
 	}
 	expected := []string{
 		"kone",

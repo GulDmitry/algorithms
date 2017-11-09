@@ -11,11 +11,11 @@ class SetCoverTest extends TestCase
     {
         $statesNeeded = ['mt', 'wa', 'or', 'id', 'nv', 'ut', 'ca', 'az'];
         $stations = [
-            'kone' => ['id', 'nv', 'ut'],
+            'kone' => ['id', 'nv', 'ut', 'ca'],
             'ktwo' => ['wa', 'id', 'mt'],
             'kthree' => ['or', 'nv', 'ca'],
             'kfour' => ['nv', 'ut'],
-            'kfive' => ['ca', 'az'],
+            'kfive' => ['az'],
         ];
         $expected = [
             'kone',
