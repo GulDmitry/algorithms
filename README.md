@@ -32,3 +32,4 @@ One test:
 
 ## TODO
 * Ford & Bellman algorithm (for negative weight)
+* Levenshtein distance
