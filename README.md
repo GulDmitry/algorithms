@@ -2,6 +2,9 @@
 Some algorithms in PHP and Golang.
 
 ### Setup
+* `cp .env.dist .env`.
+* Check `uid` and `gid`.
+
 #### PHP
 Executable file `./docker/bin/php` is based on image so run first:
 `docker-compose -f docker-compose.php.yml build --no-cache php`

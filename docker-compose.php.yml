@@ -4,10 +4,9 @@ services:
     build: ./docker/php
     image: algorithms_php
     container_name: algs-php
-    user: ${UID}:${UID}
+    user: ${uid}:${gid}
     volumes:
       - .:/var/www
       - /tmp:/tmp
-      # Composer cache.
-#      - ~/.cache/composer:/.composer/cache
+      - ${COMPOSER_CACHE}:/.composer/cache
     working_dir: /var/www

@@ -1,4 +1,4 @@
-FROM php:7.1-cli
+FROM php:7.3-cli
 
 # Latest git to avoid `unable to look up current user in the passwd file` error.
 RUN echo "deb http://ftp.us.debian.org/debian testing main contrib non-free" >> /etc/apt/sources.list
@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev \
+        libzip-dev \
         git \
         zlib1g-dev \
         g++ \
@@ -25,13 +25,10 @@ RUN apt-get install -y libbz2-dev
 RUN docker-php-ext-install zip
 
 # Install mbstring
-RUN docker-php-ext-install mbstring
-
-# Install mcrypt
-RUN docker-php-ext-install -j$(nproc) iconv mcrypt
+RUN docker-php-ext-install iconv mbstring
 
 # Install xdebug
-RUN pecl install -o -f xdebug \
+RUN pecl install -o -f xdebug-beta \
     && rm -rf /tmp/pear
 
 RUN docker-php-ext-enable xdebug
