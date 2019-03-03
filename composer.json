@@ -1,11 +1,12 @@
 {
   "autoload": {
     "psr-4": {
-      "GulDmitry\\Algorithms\\": "src/",
-      "GulDmitry\\Algorithms\\Tests\\": "tests/"
+      "GulDmitry\\Algorithms\\": "src/php/",
+      "GulDmitry\\Algorithms\\Tests\\": "tests/php/"
     }
   },
   "require": {
+    "roave/security-advisories": "dev-master",
     "php": ">=7.3",
     "phpunit/phpunit": "^7.0"
   }
