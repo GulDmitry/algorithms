@@ -1,23 +1,20 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests\Sorting;
+namespace GulDmitry\Algorithms\Test\Sorting;
 
-use GulDmitry\Algorithms\Sorting\BubbleSort;
+use GulDmitry\Algorithms\Sorting\QuickSort;
 use PHPUnit\Framework\TestCase;
 
-class BubbleSortTest extends TestCase
+class QuickSortTest extends TestCase
 {
-    /**
-     * Has `0`, negative keys and values, duplicates.
-     */
     public function testSorting()
     {
-        $expectedAsc = $shuffled = range(-101, 101) + [-1 => 1];
+        $expectedAsc = $shuffled = range(-101, 101);
         asort($expectedAsc);
         shuffle($shuffled);
         $expectedDesc = array_reverse($expectedAsc);
 
-        $alg = new BubbleSort();
+        $alg = new QuickSort();
         $actualAsc = $alg->sort($shuffled);
         $actualDesc = $alg->sort($shuffled, false);
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests;
+namespace GulDmitry\Algorithms\Test;
 
 use GulDmitry\Algorithms\Fibonacci;
 use PHPUnit\Framework\TestCase;

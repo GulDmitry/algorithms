@@ -1,37 +1,25 @@
-## algorithms
-Some algorithms in PHP and Golang.
+# algorithms
+Some algorithms in PHP.
 
-### Setup
+## Setup
 * `cp .env.dist .env`.
 * Check `uid` and `gid`.
 
-#### PHP
 Executable file `./docker/bin/php` is based on image so run first:
-`docker-compose -f docker-compose.php.yml build --no-cache php`
+`docker-compose build php`
 
 Then install dependencies:
-`docker-compose -f docker-compose.php.yml run php php composer.phar install`
+`docker-compose run php composer install`
 
 Run all tests:
-`./docker/bin/php vendor/bin/phpunit --debug`
+`./docker/bin/php vendor/bin/phpunit`
 
-Or one:
-`docker-compose -f docker-compose.php.yml run php vendor/bin/phpunit tests/FibonacciTest.php`
+### Phpstorm
+* PHPStorm -> Languages & Frameworks -> PHP 
+  * Set PHP interpreter as `docker/bin/php`.
 
-#### Go
-Get env:
-`./docker/bin/go env`
-
-`docker-compose -f docker-compose.go.yml run go go env`
-
-Run all tests:
-`./docker/bin/go test tests/... -v`
-
-In package:
-`./docker/bin/go test tests/Sorting`
-
-One test:
-`./docker/bin/go test ../../../tests/Search/dijkstras_test.go`
+* PHPStorm -> Languages & Frameworks -> PHP -> Test Frameworks
+  * User custom\Composer autoloader: `/path/to/vendor/autoload.php` 
 
 ## TODO
 * Ford & Bellman algorithm (for negative weight)

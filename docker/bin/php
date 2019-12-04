@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd "$DIR/../../" # Force phpstorm to sit in project's root dir.
+cd "$DIR/../../" # Force IDE to sit in project's root dir.
 
 # Import docker env variables.
-source $DIR/../../.env
+source .env
 
-docker run -i --rm --net=host --sig-proxy=true --pid=host \
--v /var/run/docker.sock:/var/run/docker.sock \
--v ${PWD}:${PWD} \
--v /tmp/:/tmp/ \
--v $HOME:$HOME \
--v ${COMPOSER_CACHE}:/.composer/cache \
--w ${PWD} \
---user ${uid}:${gid} \
-algorithms_php php -d include_path=vendor/phpunit/phpunit "$@"
+source `(readlink -f $(dirname $0)/.import_env)`
+docker-compose ${DOCKER_COMPOSE_ARGS} run -w /app -T php php "$@"

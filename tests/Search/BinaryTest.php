@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests\Search;
+namespace GulDmitry\Algorithms\Test\Search;
 
 use GulDmitry\Algorithms\Search\Binary;
 use PHPUnit\Framework\TestCase;

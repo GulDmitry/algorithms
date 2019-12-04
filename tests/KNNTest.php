@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests;
+namespace GulDmitry\Algorithms\Test;
 
 use GulDmitry\Algorithms\KNN;
 use PHPUnit\Framework\TestCase;

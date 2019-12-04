@@ -1,7 +1,5 @@
 FROM php:7.3-cli
 
-# Latest git to avoid `unable to look up current user in the passwd file` error.
-RUN echo "deb http://ftp.us.debian.org/debian testing main contrib non-free" >> /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
         librtmp1 \
         libfreetype6-dev \
@@ -11,7 +9,8 @@ RUN apt-get update && apt-get install -y \
         git \
         zlib1g-dev \
         g++ \
-        libicu-dev
+        libicu-dev \
+        unzip
 
 # Install intl
 RUN docker-php-ext-configure intl
@@ -33,7 +32,11 @@ RUN pecl install -o -f xdebug-beta \
 
 RUN docker-php-ext-enable xdebug
 
-COPY docker-xdebug.ini /usr/local/etc/php/conf.d/
-COPY docker-local.ini /usr/local/etc/php/conf.d/
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+COPY xdebug.ini /usr/local/etc/php/conf.d/
+COPY local.ini /usr/local/etc/php/conf.d/
+
+WORKDIR /app
 
 CMD ["php", "-a"]

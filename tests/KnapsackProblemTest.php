@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests;
+namespace GulDmitry\Algorithms\Test;
 
 use GulDmitry\Algorithms\KnapsackProblem;
 use PHPUnit\Framework\TestCase;
@@ -41,6 +41,6 @@ class KnapsackProblemTest extends TestCase
         $alg = new KnapsackProblem();
         $actual = $alg->findCombination($items, $capacity);
 
-        $this->assertEquals($expected, $actual, '', 0.0, 10, true);
+        $this->assertEqualsCanonicalizing($expected, $actual);
     }
 }

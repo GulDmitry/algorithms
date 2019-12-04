@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  php:
+    build: ./docker
+    user: ${uid}:${gid}
+    # To debug from console.
+#    environment:
+#      PHP_IDE_CONFIG: "serverName=algorithms"
+    volumes:
+      - .:/app
+      - $PWD:$PWD
+      - /tmp:/tmp
+      - ${COMPOSER_CACHE}:/.composer/cache

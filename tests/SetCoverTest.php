@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests;
+namespace GulDmitry\Algorithms\Test;
 
 use GulDmitry\Algorithms\SetCover;
 use PHPUnit\Framework\TestCase;
@@ -27,6 +27,6 @@ class SetCoverTest extends TestCase
         $alg = new SetCover();
         $actual = $alg->findCoverage($stations, $statesNeeded);
 
-        $this->assertEquals($expected, $actual, '', 0.0, 10, true);
+        $this->assertEqualsCanonicalizing($expected, $actual);
     }
 }
