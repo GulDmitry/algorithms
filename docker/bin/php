@@ -6,4 +6,4 @@ cd "$DIR/../../" # Force IDE to sit in project's root dir.
 source .env
 
 source `(readlink -f $(dirname $0)/.import_env)`
-docker-compose ${DOCKER_COMPOSE_ARGS} run -w /app -T php php "$@"
+docker-compose ${DOCKER_COMPOSE_ARGS} run --rm -w /app -T php php "$@"

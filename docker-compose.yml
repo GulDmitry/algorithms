@@ -3,11 +3,20 @@ services:
   php:
     build: ./docker
     user: ${uid}:${gid}
-    # To debug from console.
-#    environment:
-#      PHP_IDE_CONFIG: "serverName=algorithms"
+    environment:
+      PHP_IDE_CONFIG: "serverName=algorithms"
     volumes:
       - .:/app
       - $PWD:$PWD
       - /tmp:/tmp
       - ${COMPOSER_CACHE}:/.composer/cache
+    networks:
+      base_net:
+
+networks:
+  base_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.120.0/24
