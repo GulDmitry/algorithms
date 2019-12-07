@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms\Tests\Sorting;
+namespace GulDmitry\Algorithms\Test\Sorting;
 
 use GulDmitry\Algorithms\Sorting\MergeSort;
 use PHPUnit\Framework\TestCase;
