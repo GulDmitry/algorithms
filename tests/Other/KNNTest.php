@@ -1,8 +1,8 @@
 <?php
 
-namespace GulDmitry\Algorithms\Test;
+namespace GulDmitry\Algorithms\Test\Other;
 
-use GulDmitry\Algorithms\KNN;
+use GulDmitry\Algorithms\Other\KNN;
 use PHPUnit\Framework\TestCase;
 
 class KNNTest extends TestCase

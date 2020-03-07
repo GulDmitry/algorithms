@@ -1,8 +1,8 @@
 <?php
 
-namespace GulDmitry\Algorithms\Test;
+namespace GulDmitry\Algorithms\Test\Other;
 
-use GulDmitry\Algorithms\KnapsackProblem;
+use GulDmitry\Algorithms\Other\KnapsackProblem;
 use PHPUnit\Framework\TestCase;
 
 class KnapsackProblemTest extends TestCase

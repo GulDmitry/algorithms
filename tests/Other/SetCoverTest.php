@@ -1,8 +1,8 @@
 <?php
 
-namespace GulDmitry\Algorithms\Test;
+namespace GulDmitry\Algorithms\Test\Other;
 
-use GulDmitry\Algorithms\SetCover;
+use GulDmitry\Algorithms\Other\SetCover;
 use PHPUnit\Framework\TestCase;
 
 class SetCoverTest extends TestCase

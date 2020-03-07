@@ -1,6 +1,6 @@
 <?php
 
-namespace GulDmitry\Algorithms;
+namespace GulDmitry\Algorithms\Other;
 
 class Fibonacci
 {

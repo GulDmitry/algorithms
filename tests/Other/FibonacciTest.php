@@ -1,8 +1,8 @@
 <?php
 
-namespace GulDmitry\Algorithms\Test;
+namespace GulDmitry\Algorithms\Test\Other;
 
-use GulDmitry\Algorithms\Fibonacci;
+use GulDmitry\Algorithms\Other\Fibonacci;
 use PHPUnit\Framework\TestCase;
 
 class FibonacciTest extends TestCase
