@@ -1,7 +1,8 @@
-FROM php:7.3-cli
+FROM php:7.4-cli
 
 RUN apt-get update && apt-get install -y \
         librtmp1 \
+        libonig-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
@@ -38,5 +39,3 @@ COPY xdebug.ini /usr/local/etc/php/conf.d/
 COPY local.ini /usr/local/etc/php/conf.d/
 
 WORKDIR /app
-
-CMD ["php", "-a"]
